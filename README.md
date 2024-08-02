@@ -9,11 +9,16 @@ Thought Process:
   The obvious implementation was to create a 2D vector (vector<vector<int>>), since that is how tic-tac-toe looks. 
   I was initially concerned about how the player would be able to input, however.
   I thought a system where they type 1-9 to select the corresponding spaces on the board would work good.
-  To support this system, I made a "Grid" class that was secretly just a regular vector (vector<int>) but would display as a 3x3 grid. However, I hoped to be able to make it a more scalable class eventually, so I did not want to hard-code its functions.
-  After getting player input to work, the next step was the computer. Since there was no description of how the computer should act, I made it just do random moves. A more intelligent computer could be added later.
+  To support this system, I made a "Grid" class that was secretly just a regular vector (vector<int>) but would display as a 3x3 grid. 
+  However, I hoped to be able to make it a more scalable class eventually, so I did not want to hard-code its functions.
+  After getting player input to work, the next step was the computer. 
+  Since there was no description of how the computer should act, I made it just do random moves. 
+  A more intelligent computer could be added later.
   Checking for victory was next. Using many for loops, I would check every horizontal and vertical row, and finish it off with 2 diagonal checks.
-  After implementing this, I decided that I did not like the 1-9 system of input. So, ultimately I basically backtracked and made an x,y coordinate system of input instead.
+  After implementing this, I decided that I did not like the 1-9 system of input.
+  So, ultimately I basically backtracked and made an x,y coordinate system of input instead.
   To make the x,y coordinate system, I made 2 functions that could translate an integer to a tuple and vice versa. 
   Since I made the program with scalability in mind from the start, adding in the option to resize the board was very quick and easy to implement. 
   Ultimately, a smarter computer was not implemented.
-  If I were to do this again, I absolutely would have just stuck with a 2D vector. Making the Grid secretly just a 1D vector overcomplicated many functions.
+  If I were to do this again, I absolutely would have just stuck with a 2D vector. 
+  Making the Grid secretly just a 1D vector overcomplicated many functions.
